@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies (if any)..."
+  build:
+    commands:
+      - echo "Building application (if any)..."
+      - echo "Simulating build output..."
+      - mkdir -p build_output # Create a directory for artifacts
+      - echo "Hello from CodeBuild!" > build_output/index.html # Create a dummy artifact
+artifacts:
+  files:
+    - build_output/index.html # Specify the artifact to be passed to the next stage
+  discard-paths: no
