@@ -1,0 +1,5 @@
+version: 0.0
+os: linux
+files:
+  - source: /build_output/index.html # This matches the artifact created by CodeBuild
+    destination: /var/www/html/     # The directory where Apache serves files on your EC2
